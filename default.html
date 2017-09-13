@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>default</title>
+</head>
+<body>
+    <script src="myTestFramework.js"></script>
+    <script>
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        tests({
+            'test example one: it should force fail': function() {
+                fail();
+            },
+            'test example two: it should pass': function() {
+                debugger;
+                var testingSum = sum(10, 10);
+                eq(testingSum, 20);
+            }
+        });
+    </script>
+</body>
+</html>
