@@ -1,7 +1,7 @@
 # Intermediate-Algorithm-Scripting
 Free Code Camp Intermediate Algorithm Scripting
 
-- [x] Sum All Numbers in a Range Complete
+- [x] [Sum All Numbers in a Range Complete](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-numbers-in-a-range.html)
 - [ ] Diff Two Arrays
 - [ ] Roman Numeral Converter
 - [ ] Wherefore art thou
