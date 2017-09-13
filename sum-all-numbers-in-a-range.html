@@ -20,12 +20,18 @@
     <script src="tinytest.js"></script>
     <script>
 
-        // [1, 4]
-        // 1 + 2 + 3 + 4 = 10
         function sumAll(arr) {
             
-            var minVal = arr[0];
-            var maxVal = arr[1];
+            // finding the min val on the array
+            var minVal = arr.reduce(function(a, b) {
+                return Math.min(a, b);
+            });
+
+            // finding the max val on the array
+            var maxVal = arr.reduce(function(a, b) {
+                return Math.max(a, b);
+            });
+            
             var newArr = [];
             
             // finding all the numbers between the two numbers in the array.
@@ -49,19 +55,19 @@
             'it should return 10.': function() {
                 var testing = sumAll([1, 4]);
                 eq(testing, 10);
+            },
+            'it should also return 10 (the lowest number will not always come first.)': function() {
+                var testing = sumAll([4, 1]);
+                eq(testing, 10);
+            },
+            'It should return 45.': function() {
+                var testing = sumAll([5, 10]);
+                eq(testing, 45);
+            },
+            'It should also return 45 (the lowest number will not always come first.)': function() {
+                var testing = sumAll([10, 5]);
+                eq(testing, 45);
             }
-            // 'it should also return 10 (the lowest number will not always come first.)': function() {
-            //     var testing = sumAll([4, 1]);
-            //     eq(testing, 10);
-            // },
-            // 'It should return 45.': function() {
-            //     var testing = sumAll([5, 10]);
-            //     eq(testing, 45);
-            // },
-            // 'It should also return 45 (the lowest number will not always come first.)': function() {
-            //     var testing = sumAll([10, 5]);
-            //     eq(testing, 45);
-            // }
         });
 
     </script>
