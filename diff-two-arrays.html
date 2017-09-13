@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diff Two Arrays</title>
+</head>
+<body>
+    <header>
+        <p>
+            Compare two arrays and return a new array with any items only found in one of the two given arrays, 
+            but not both. In other words, return the symmetric difference of the two arrays.
+        </p>
+        <p>Here are some helpful links:</p>
+        <ul>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">
+                Comparison Operators
+                </a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+                    Array.prototype.slice()
+                </a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">
+                    Array.prototype.filter()
+                </a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">
+                    Array.prototype.indexOf()
+                </a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=a">
+                    Array.prototype.concat()
+                </a>
+            </li>
+        </ul>
+    </header>
+    <script src="myTestFramework.js"></script>
+    <script>
+
+        function diffArray(arr1, arr2) {
+            var newArr = [];
+            // Same, same; but different.
+            return newArr;
+        }
+
+        tests({
+            'It should return an array.': function() {
+                var testArr = diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+                eq(Array.isArray(testArr), true);
+            },
+            'It should return ["pink wool"].': function() {
+                var testArr = diffArray(
+                    ['diorite', 'andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'], 
+                    ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']
+                );
+
+                eq(testArr[0], 'pink wool');
+            },
+            'It should return ["diorite", "pink wool"].': function() {
+                var testArr = diffArray(
+                    ['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'], 
+                    ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']
+                );
+
+                eq(testArr[0], 'diorite');
+                eq(testArr[1], 'pink wool');
+            },
+            'It should return [].': function() {
+                var testArr = diffArray(
+                    ["andesite", "grass", "dirt", "dead shrub"], 
+                    ["andesite", "grass", "dirt", "dead shrub"]
+                );
+
+                eq(testArr.length, 0);
+            },
+            'It should return [4].': function() {
+                var testArr = diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+                eq(testArr[0], 4);
+            },
+            'It should return ["piglet", 4].': function() {
+                var testArr = diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
+
+                eq(testArr[0], 'piglet');
+                eq(testArr[1], 4);
+            },
+            'It should return ["snuffleupagus", "cookie monster", "elmo"].': function() {
+                var testArr = diffArray([], ["snuffleupagus", "cookie monster", "elmo"]);
+
+                eq(testArr[0], 'snuffleupagus');
+                eq(testArr[1], 'cookie monster');
+                eq(testArr[2], 'elmo');
+            },
+            'It should return [1, "calf", 3, "piglet", 7, "filly"].': function() {
+                var testArr = diffArray([1, "calf", 3, "piglet"], [7, "filly"] );
+                
+                eq(testArr[0], 1);
+                eq(testArr[1], 'calf');
+                eq(testArr[2], 3);
+                eq(testArr[3], 'piglet');
+                eq(testArr[4], 7);
+                eq(testArr[5], 'filly');
+            }
+        });
+    </script>
+</body>
+</html>
