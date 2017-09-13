@@ -4,24 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>default</title>
+    <title>Sum All Numbers in a Range</title>
 </head>
 <body>
-    <script src="myTestFramework.js"></script>
+    <header>
+        <p>We'll pass you an array of two numbers. Return the sum of those two numbers and all numbers between them.</p>
+        <p>The lowest number will not always come first.</p>        
+        <p>Here are some helpful links:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max">Math.max()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=b">Array.prototype.reduce()</a></li>
+        </ul>
+    </header>
+    <script src="tinytest.js"></script>
     <script>
 
-        function sum(a, b) {
-            return a + b;
+        function sumAll(arr) {
+            return 1;
         }
 
         tests({
-            'test example one: it should force fail': function() {
-                fail();
+            'it should return a number.': function() {
+                var testingIfNumber = sumAll([1, 4]);
+                assert(!isNaN(testingIfNumber));
             },
-            'test example two: it should pass': function() {
-                debugger;
-                var testingSum = sum(10, 10);
-                eq(testingSum, 20);
+            'it should return 10.': function() {
+                var testing = sumAll([1, 4]);
+                eq(testing, 10);
+            },
+            'it should also return 10 (the lowest number will not always come first.)': function() {
+                var testing = sumAll([4, 1]);
+                eq(testing, 10);
+            },
+            'It should return 45.': function() {
+                var testing = sumAll([5, 10]);
+                eq(testing, 45);
+            },
+            'It should also return 45 (the lowest number will not always come first.)': function() {
+                var testing = sumAll([10, 5]);
+                eq(testing, 45);
             }
         });
     </script>
