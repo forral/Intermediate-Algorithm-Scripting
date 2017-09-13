@@ -41,12 +41,32 @@
             </li>
         </ul>
     </header>
-    <script src="myTestFramework.js"></script>
+    <script src="tinytest.js"></script>
     <script>
 
+        // ['diorite', 'andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'], 
+        // ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']
+        // => ['pink wool']
+
+        // ['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'], 
+        // ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']
+        // => ["diorite", "pink wool"]
         function diffArray(arr1, arr2) {
             var newArr = [];
-            // Same, same; but different.
+
+            // runs trought the arr2 to catch what's not in the arr1
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr2.indexOf(arr1[i]) === -1) {
+                    newArr.push(arr1[i]);
+                }
+            }
+
+            for (var i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) === -1) {
+                    newArr.push(arr2[i]);
+                }
+            }
+
             return newArr;
         }
 
@@ -65,6 +85,7 @@
                 eq(testArr[0], 'pink wool');
             },
             'It should return ["diorite", "pink wool"].': function() {
+                debugger;
                 var testArr = diffArray(
                     ['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'], 
                     ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']
