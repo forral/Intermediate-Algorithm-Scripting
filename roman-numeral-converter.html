@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roman Numeral Converter</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1>Roman Numeral Converter</h1>
+
+        <p>Convert the given number into a roman numeral. All roman numerals answers should be provided in upper-case. Here are some helpful links:</p>
+                
+        <ul>
+            <li><a href="http://www.mathsisfun.com/roman-numerals.html">Roman Numerals</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.prototype.splice()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">Array.prototype.indexOf()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join()</a></li>
+        </ul>
+
+    </header>
+    <script src="myTestFramework.js"></script>
+    <script>
+
+        function convertToRoman(num) {
+            return num;
+        }
+
+        tests({
+            'It should return "II".': function() {
+                var convertTest = convertToRoman(2);
+            
+                eq(convertTest, 'II');
+            },
+            'It should return "III".': function() {
+                var convertTest = convertToRoman(3);
+                
+                eq(convertTest, 'III');
+            },
+            'It should return "IV".': function() {
+                var convertTest = convertToRoman(4);
+                
+                eq(convertTest, 'IV');
+            },
+            'It should return "V".': function() {
+                var convertTest = convertToRoman(5);
+                
+                eq(convertTest, 'V');
+            },
+            'It should return "IX".': function() {
+                var convertTest = convertToRoman(9);
+                
+                eq(convertTest, 'IX');
+            },
+            'It should return "XII".': function() {
+                var convertTest = convertToRoman(12);
+                
+                eq(convertTest, 'XII');
+            },
+            'It should return "XVI".': function() {
+                var convertTest = convertToRoman(16);
+                
+                eq(convertTest, 'XVI');
+            },
+            'It should return "XXIX".': function() {
+                var convertTest = convertToRoman(29);
+                
+                eq(convertTest, 'XXIX');
+            },
+            'It should return "XLIV".': function() {
+                var convertTest = convertToRoman(44);
+                
+                eq(convertTest, 'XLIV');
+            },
+            'It should return "XLV"': function() {
+                var convertTest = convertToRoman(45);
+                
+                eq(convertTest, 'XLV');
+            },
+            'It should return "LXVIII"': function() {
+                var convertTest = convertToRoman(68);
+                
+                eq(convertTest, 'LXVIII');
+            },
+            'It should return "LXXXIII"': function() {
+                var convertTest = convertToRoman(83);
+                
+                eq(convertTest, 'LXXXIII');
+            },
+            'It should return "XCVII"': function() {
+                var convertTest = convertToRoman(97);
+                
+                eq(convertTest, 'XCVII');
+            },
+            'It should return "XCIX"': function() {
+                var convertTest = convertToRoman(99);
+                
+                eq(convertTest, 'XCIX');
+            },
+            'It should return "D"': function() {
+                var convertTest = convertToRoman(500);
+                
+                eq(convertTest, 'D');
+            },
+            'It should return "DI"': function() {
+                var convertTest = convertToRoman(501);
+                
+                eq(convertTest, 'DI');
+            },
+            'It should return "DCXLIX"': function() {
+                var convertTest = convertToRoman(649);
+                
+                eq(convertTest, 'DCXLIX');
+            },
+            'It should return "DCCXCVIII"': function() {
+                var convertTest = convertToRoman(798);
+                
+                eq(convertTest, 'DCCXCVIII');
+            },
+            'It should return "DCCCXCI"': function() {
+                var convertTest = convertToRoman(891);
+                
+                eq(convertTest, 'DCCCXCI');
+            },
+            'It should return "M"': function() {
+                var convertTest = convertToRoman(1000);
+                
+                eq(convertTest, 'M');
+            },
+            'It should return "MIV"': function() {
+                var convertTest = convertToRoman(1004);
+                
+                eq(convertTest, 'MIV');
+            },
+            'It should return "MVI"': function() {
+                var convertTest = convertToRoman(1006);
+                
+                eq(convertTest, 'MVI');
+            },
+            'It should return "MXXIII"': function() {
+                var convertTest = convertToRoman(1023);
+                
+                eq(convertTest, 'MXXIII');
+            },
+            'It should return "MMXIV"': function() {
+                var convertTest = convertToRoman(2014);
+                
+                eq(convertTest, 'MMXIV');
+            },
+            'It should return "MMMCMXCIX"': function() {
+                var convertTest = convertToRoman(3999);
+                
+                eq(convertTest, 'MMMCMXCIX');
+            }
+        });
+    </script>
+</body>
+</html>

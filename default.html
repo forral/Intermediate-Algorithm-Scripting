@@ -7,7 +7,7 @@
     <title>default</title>
 </head>
 <body>
-    <script src="tinytest.js"></script>
+    <script src="myTestFramework.js"></script>
     <script>
 
         function sum(a, b) {
@@ -19,7 +19,6 @@
                 fail();
             },
             'test example two: it should pass': function() {
-                debugger;
                 var testingSum = sum(10, 10);
                 eq(testingSum, 20);
             }
