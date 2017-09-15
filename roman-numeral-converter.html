@@ -23,7 +23,7 @@
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join()</a></li>
         </ul>
     </header>
-    <script src="tinytest.js"></script>
+    <script src="myTestFramework.js"></script>
     <script>
         // Solution based of the Mr Snow solution: https://www.youtube.com/watch?v=gy4uKqf-RVo
         function convertToRoman(num) {
@@ -62,10 +62,9 @@
 
         tests({
             'It should return "II".': function() {
-                debugger;
                 var convertTest = convertToRoman(2);
             
-                eq(convertTest, 'II');
+                eq(convertTest, 'III');
             },
             'It should return "III".': function() {
                 var convertTest = convertToRoman(3);

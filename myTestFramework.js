@@ -24,7 +24,7 @@ var myTestFramework = {
 	},
 	equality: function(a, b) {
 		if (a !== b) {
-			throw new Error('Equality Test Has Failed');
+			throw new Error('Equality Test Has Failed: ' + a + ' !== ' + b);
 		}
 	}
 };
