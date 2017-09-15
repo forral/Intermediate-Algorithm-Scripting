@@ -1,5 +1,7 @@
 # Intermediate-Algorithm-Scripting
-Free Code Camp Intermediate Algorithm Scripting
+This is my repo for the [Free Code Camp Intermediate Algorithm Scripting](https://www.freecodecamp.org) challenges.
+
+I don't like solving these challenges in the Free Code Camp website, so I use an testing library developed by my self with the help of the [Watch and Code](https://watchandcode.com/p/premium) premium course. The lib name is Simple Test Lib and you can have more information about ir in [here](https://github.com/forral/simple-test-lib).
 
 - [x] [Sum All Numbers in a Range Complete](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-numbers-in-a-range.html)
 - [x] [Diff Two Arrays](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/diff-two-arrays.html)
