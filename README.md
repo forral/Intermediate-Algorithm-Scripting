@@ -2,8 +2,8 @@
 Free Code Camp Intermediate Algorithm Scripting
 
 - [x] [Sum All Numbers in a Range Complete](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-numbers-in-a-range.html)
-- [ ] Diff Two Arrays
-- [ ] Roman Numeral Converter
+- [x] [Diff Two Arrays](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/diff-two-arrays.html)
+- [x] [Roman Numeral Converter](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/roman-numeral-converter.html)
 - [ ] Wherefore art thou
 - [ ] Search and Replace
 - [ ] Pig Latin
