@@ -14,46 +14,55 @@
 </head>
 <body>
     <header>
-
         <h1>Roman Numeral Converter</h1>
-
-        <p>Convert the given number into a roman numeral. All roman numerals answers should be provided in upper-case. Here are some helpful links:</p>
-                
+        <p>Convert the given number into a roman numeral. All roman numerals answers should be provided in upper-case. Here are some helpful links:</p>   
         <ul>
             <li><a href="http://www.mathsisfun.com/roman-numerals.html">Roman Numerals</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.prototype.splice()</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">Array.prototype.indexOf()</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join()</a></li>
         </ul>
-
     </header>
-    <script src="myTestFramework.js"></script>
+    <script src="tinytest.js"></script>
     <script>
-
-        //convertToRoman(2); === 'II'
+        // Solution based of the Mr Snow solution: https://www.youtube.com/watch?v=gy4uKqf-RVo
         function convertToRoman(num) {
 
-            var romanDec = {
-                1: 'I',
-                2: 'II',
-                3: 'III',
-                4: 'IV',
-                5: 'V',
-                6: 'VI',
-                7: 'VII',
-                8: 'VIII',
-                9: 'IX'
+            var roman = {
+                M: 1000,
+                CM: 900,
+                D: 500,
+                CD: 400,
+                C: 100,
+                XC: 90,
+                L: 50,
+                XL: 40,
+                X: 10,
+                IX: 9,
+                V: 5,
+                IV: 4,
+                I: 1
             }
 
-            if (romanDec[num]) {
-                num = romanDec[num];
+            var romanNumberal = '';
+
+            // iterate all the properties of the roman object.
+            for (var key in roman) {
+                // check to see if the num passed is greater or equal to the current property value
+                while (num >= roman[key]) {
+                    // if so, append the property to the romanNumberal variable
+                    romanNumberal = romanNumberal + key;
+                    // and substract the current property value from num
+                    num = num - roman[key];
+                }
             }
 
-            return num;
+            return romanNumberal;
         }
 
         tests({
             'It should return "II".': function() {
+                debugger;
                 var convertTest = convertToRoman(2);
             
                 eq(convertTest, 'II');
