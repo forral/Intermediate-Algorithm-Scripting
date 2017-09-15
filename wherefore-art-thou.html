@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wherefore art thou</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+        code {
+            color: blueviolet;
+            background: lightgrey;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wherefore art thou</h1>
+        <p>
+            Make a function that looks through an array of objects (first argument) 
+            and returns an array of all objects that have matching property and value 
+            pairs (second argument). Each property and value pair of the source object 
+            has to be present in the object from the collection if it is to be included 
+            in the returned array.
+        </p>
+        <p>
+            For example, if the first argument is 
+            <code>[{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }]</code>, 
+            and the second argument is <code>{ last: "Capulet" }</code>, then you must return the third 
+            object from the array (the first argument), because it contains the property and 
+            its value, that was passed on as the second argument.
+        </p>
+        <p>
+            Here are some helpful links:
+        </p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Global Object</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.prototype.hasOwnProperty()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function whatIsInAName(collection, source) {
+            // What's in a name?
+            var arr = [];
+            // Only change code below this line
+            
+            
+            // Only change code above this line
+            return arr;
+        }
+
+        tests({
+            'It should return [{ first: "Tybalt", last: "Capulet" }].': function() {
+                var testArray = whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+            
+                fail();
+            },
+            
+            'It should return [{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }].': function() {
+                var testArray = whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 });
+            
+                fail();
+            },
+            
+            'It should return [{ "a": 1, "b": 2 }, { "a": 1, "b": 2, "c": 2 }].': function() {
+                var testArray = whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
+            
+                fail();
+            },
+            
+            'It should return [{ "a": 1, "b": 2, "c": 2 }].': function() {
+                var testArray = whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "c": 2 });
+            
+                fail();
+            }
+        });
+    </script>
+</body>
+</html>
