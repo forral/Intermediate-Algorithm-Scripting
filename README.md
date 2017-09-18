@@ -6,7 +6,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Sum All Numbers in a Range Complete](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-numbers-in-a-range.html)
 - [x] [Diff Two Arrays](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/diff-two-arrays.html)
 - [x] [Roman Numeral Converter](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/roman-numeral-converter.html)
-- [ ] Wherefore art thou
+- [x] [Wherefore art thou](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/wherefore-art-thou.html)
 - [ ] Search and Replace
 - [ ] Pig Latin
 - [ ] DNA Pairing

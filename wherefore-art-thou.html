@@ -51,34 +51,26 @@
             var arr = [];
             // Only change code below this line
             
-
-            var myObj  = {firstName: 'luis', lastName:'forra'};
-            var numOfProp = keys(myObj).length;
+            var numOfProp = Object.keys(source).length;
             var counter = 0;
             
-            var famObj = [{firstName: 'lurdes', lastName: 'oliveira'}, {firstName: 'raquel', lastName: 'jacob'}]
-            
-            var arrOfObj = [];
-            
             // loop the array of objects
-            for (var i = 0; i < famObj.length; i++) {
+            for (var i = 0; i < collection.length; i++) {
                 // loop myObj to see if there's equal prop/value in momObj
-                for (var prop in myObj) {
-
-                    if (famObj[i].hasOwnProperty(prop)) {
+                for (var prop in source) {
+            
+                    if (collection[i].hasOwnProperty(prop) && collection[i][prop] === source[prop]) {
                         counter++;
                     }
             
                     if (counter === numOfProp) {
-                        arrOfObj.push(famObj[i]);
+                        arr.push(collection[i]);
                     }
-
+            
                 }
-
+            
                 counter = 0;
             }
-            
-            console.log(arrOfObj);
 
             // Only change code above this line
             return arr;
@@ -88,8 +80,8 @@
             'It should return [{ first: "Tybalt", last: "Capulet" }].': function() {
                 var testArray = whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
             
-                eq(testArray[0].first, 'Tybalt');
-                eq|(testArray[0].last, 'Capulet');
+                eq(testArray[0]['first'], 'Tybalt');
+                eq|(testArray[0]['last'], 'Capulet');
             },
             
             'It should return [{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }].': function() {
