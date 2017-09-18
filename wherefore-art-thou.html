@@ -51,7 +51,35 @@
             var arr = [];
             // Only change code below this line
             
+
+            var myObj  = {firstName: 'luis', lastName:'forra'};
+            var numOfProp = keys(myObj).length;
+            var counter = 0;
             
+            var famObj = [{firstName: 'lurdes', lastName: 'oliveira'}, {firstName: 'raquel', lastName: 'jacob'}]
+            
+            var arrOfObj = [];
+            
+            // loop the array of objects
+            for (var i = 0; i < famObj.length; i++) {
+                // loop myObj to see if there's equal prop/value in momObj
+                for (var prop in myObj) {
+
+                    if (famObj[i].hasOwnProperty(prop)) {
+                        counter++;
+                    }
+            
+                    if (counter === numOfProp) {
+                        arrOfObj.push(famObj[i]);
+                    }
+                    
+                }
+
+                counter = 0;
+            }
+            
+            console.log(arrOfObj);
+
             // Only change code above this line
             return arr;
         }
