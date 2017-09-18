@@ -72,7 +72,7 @@
                     if (counter === numOfProp) {
                         arrOfObj.push(famObj[i]);
                     }
-                    
+
                 }
 
                 counter = 0;
@@ -88,25 +88,35 @@
             'It should return [{ first: "Tybalt", last: "Capulet" }].': function() {
                 var testArray = whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
             
-                fail();
+                eq(testArray[0].first, 'Tybalt');
+                eq|(testArray[0].last, 'Capulet');
             },
             
             'It should return [{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }].': function() {
                 var testArray = whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 });
             
-                fail();
+                eq(testArray[0].a, 1);
+                eq(testArray[1].a, 1);
+                eq(testArray[2].a, 1);
+                eq(testArray[2].b, 2);
             },
             
             'It should return [{ "a": 1, "b": 2 }, { "a": 1, "b": 2, "c": 2 }].': function() {
                 var testArray = whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
             
-                fail();
+                eq(testArray[0].a, 1);
+                eq(testArray[0].b, 2);
+                eq(testArray[1].a, 1);
+                eq(testArray[1].b, 2);
+                eq(testArray[1].c, 2);
             },
             
             'It should return [{ "a": 1, "b": 2, "c": 2 }].': function() {
                 var testArray = whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "c": 2 });
             
-                fail();
+                eq(testArray[0].a, 1);
+                eq(testArray[0].b, 2);
+                eq(testArray[0].c, 2);
             }
         });
     </script>
