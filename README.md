@@ -7,7 +7,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Diff Two Arrays](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/diff-two-arrays.html)
 - [x] [Roman Numeral Converter](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/roman-numeral-converter.html)
 - [x] [Wherefore art thou](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/wherefore-art-thou.html)
-- [ ] Search and Replace
+- [x] [Search and Replace](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/search-and-replace.html)
 - [ ] Pig Latin
 - [ ] DNA Pairing
 - [ ] Missing letters
