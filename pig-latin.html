@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pig-latin</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pig Latin</h1>
+        <p>
+            Translate the provided string to pig latin.
+            Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an "ay".    
+            If a word begins with a vowel you just add "way" to the end.    
+            Input strings are guaranteed to be English words in all lowercase.
+        </p> 
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Pig_Latin">Pig Latin</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">Array.prototype.indexOf()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push?v=a">Array.prototype.push()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr">String.prototype.substr()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.prototype.split()</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function translatePigLatin(str) {
+            return str;
+        }
+
+        tests({
+
+            'It should return "aliforniacay".': function() {
+                var testStr = translatePigLatin("california");
+                fail();
+            },
+
+            'It should return "aragraphspay".': function() {
+                var testStr = translatePigLatin("paragraphs");
+                fail();
+            },
+
+            'It should return "oveglay".': function() {
+                var testStr = translatePigLatin("glove");
+                fail();
+            },
+
+            'It should return "algorithmway".': function() {
+                var testStr = translatePigLatin("algorithm");
+                fail();
+            },
+
+            'It should return "eightway".': function() {
+                var testStr = translatePigLatin("eight");
+                fail();
+            }
+
+        });
+    </script>
+</body>
+</html>
