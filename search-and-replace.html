@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search and Replace</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Search and Replace</h1>
+        <p>
+            Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+            First argument is the sentence to perform the search and replace on.      
+            Second argument is the word that you will be replacing (before).
+            Third argument is what you will be replacing the second argument with (after).
+            NOTE: Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
+        </p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.prototype.splice()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join()</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function myReplace(str, before, after) {
+            return str;
+        }
+
+        tests({
+            'It should return "Let us go to the mall".': function() {
+                var testString = myReplace("Let us go to the store", "store", "mall");
+                fail();
+            },
+
+            'It should return "He is Sitting on the couch".': function() {
+                var testString = myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
+                fail();
+            },
+
+            'It should return "This has a spelling error".': function() {
+                var testString = myReplace("This has a spellngi error", "spellngi", "spelling");
+                fail();
+            },
+            
+            'It should return "His name is John".': function() {
+                var testString = myReplace("His name is Tom", "Tom", "john");
+                fail();
+            },
+
+            'It should return "Let us get back to more Algorithms".': function() {
+                var testString = myReplace("Let us get back to more Coding", "Coding", "algorithms");
+                fail();
+            }
+        });
+    </script>
+</body>
+</html>
