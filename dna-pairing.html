@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DNA Pairing</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DNA Pairing</h1>
+        <p>
+            The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+            Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+            Return the provided character as the first element in each array.            
+            For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]            
+            The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
+        </p>   
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Base_pair">Base pair</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push?v=a">Array.prototype.push()</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.prototype.split()</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+            function pairElement(str) {
+                return str;
+            }
+
+        tests({
+
+            'It should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].': function() {
+                var testArr = pairElement("ATCGA");
+                fail();
+            },
+
+            'It should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]].': function() {
+                var testArr = pairElement("TTGAG");
+                fail();
+            },
+
+            'should return [["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]].': function() {
+                var testArr = pairElement("CTCTA");
+                fail();
+            }
+
+        });
+    </script>
+</body>
+</html>
