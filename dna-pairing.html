@@ -31,25 +31,88 @@
     <script src="simple-test-lib.js"></script>
     <script>
 
-            function pairElement(str) {
-                return str;
+        // pairElement("ATCGA");
+        function pairElement(str) {
+
+            var encapsulating = [];
+
+            var bp = {
+                A: 'T',
+                C: 'G',
+                G: 'C',
+                T: 'A'
+            };
+
+            for (var i = 0; i < str.length; i++) {
+                var paired = [];
+                for (var key in bp) {
+                    if (key === str[i]) {
+                        paired.push(str[i]);
+                        paired.push(bp[key]);
+                        encapsulating.push(paired);
+                    }
+                }
             }
+            return encapsulating;
+        }
 
         tests({
 
             'It should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].': function() {
                 var testArr = pairElement("ATCGA");
-                fail();
+                
+                eq(testArr[0][0], 'A');
+                eq(testArr[0][1], 'T');
+
+                eq(testArr[1][0], 'T');
+                eq(testArr[1][1], 'A');
+
+                eq(testArr[2][0], 'C');
+                eq(testArr[2][1], 'G');
+
+                eq(testArr[3][0], 'G');
+                eq(testArr[3][1], 'C');
+
+                eq(testArr[4][0], 'A');
+                eq(testArr[4][1], 'T');
             },
 
             'It should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]].': function() {
                 var testArr = pairElement("TTGAG");
-                fail();
+                
+                eq(testArr[0][0], 'T');
+                eq(testArr[0][1], 'A');
+
+                eq(testArr[1][0], 'T');
+                eq(testArr[1][1], 'A');
+
+                eq(testArr[2][0], 'G');
+                eq(testArr[2][1], 'C');
+
+                eq(testArr[3][0], 'A');
+                eq(testArr[3][1], 'T');
+
+                eq(testArr[4][0], 'G');
+                eq(testArr[4][1], 'C');                 
             },
 
             'should return [["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]].': function() {
                 var testArr = pairElement("CTCTA");
-                fail();
+                
+                eq(testArr[0][0], 'C');
+                eq(testArr[0][1], 'G');
+
+                eq(testArr[1][0], 'T');
+                eq(testArr[1][1], 'A');
+
+                eq(testArr[2][0], 'C');
+                eq(testArr[2][1], 'G');
+
+                eq(testArr[3][0], 'T');
+                eq(testArr[3][1], 'A');
+
+                eq(testArr[4][0], 'A');
+                eq(testArr[4][1], 'T');
             }
 
         });
