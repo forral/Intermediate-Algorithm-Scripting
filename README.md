@@ -8,7 +8,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Roman Numeral Converter](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/roman-numeral-converter.html)
 - [x] [Wherefore art thou](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/wherefore-art-thou.html)
 - [x] [Search and Replace](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/search-and-replace.html)
-- [ ] Pig Latin
+- [x] [Pig Latin](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/pig-latin.html)
 - [ ] DNA Pairing
 - [ ] Missing letters
 - [ ] Boo who

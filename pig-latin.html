@@ -34,39 +34,21 @@
     <script>
 
         function translatePigLatin(str) {
-
-            // Rule 1.
-            // For words that begin with consonant sounds, 
-            // all letters before the initial vowel are placed 
-            // at the end of the word sequence. Then, "ay" is added.
-
-            // Rule 2.
-            // for words that begin with vowel sounds, 
-            // one just adds "way" or "yay" to the end (or just "ay").
-
-            // Rule 3.
-            // When words begin with consonant clusters (multiple consonants that form one sound), 
-            // the whole sound is added to the end when speaking or writing.
-
             var vowels = ['a', 'e', 'i', 'o', 'u'];
 
-            if (vowels.indexOf(str.charAt(0)) === -1) {
-                str = str.slice(1) + str.charAt(0) + 'ay';
-            } else {
-                str = str + 'way';
-            }
-
-
-            
-
             for (var i = 0; i < str.length; i++) {
+                // check if the fist letter is a vowel
                 if (vowels.indexOf(str[i]) !== -1) {
-                    console.log(str.slice(i) + str.slice(0, i) + 'ay');
-                    break;
+                    if (str.substr(0, i).length === 0) {
+                        return str + 'way';
+                    } else {
+                        // if the first letter it's not a vowel, then find the first vowel
+                        // on the word, cut the consoants on the left side of the vowel and
+                        // put them on the end of the string plus 'ay'.
+                        return str.substring(i, str.length) + str.substring(0, i) + 'ay';
+                    }
                 }
             }
-
-
             return str;
         }
 
@@ -83,7 +65,7 @@
             },
 
             'It should return "oveglay".': function() {
-                var testStr = translatePigLatin("gl ove");
+                var testStr = translatePigLatin("glove");
                 eq(testStr, 'oveglay');
             },
 
