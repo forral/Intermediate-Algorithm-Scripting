@@ -9,7 +9,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Wherefore art thou](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/wherefore-art-thou.html)
 - [x] [Search and Replace](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/search-and-replace.html)
 - [x] [Pig Latin](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/pig-latin.html)
-- [ ] DNA Pairing
+- [x] [DNA Pairing](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/dna-pairing.html)
 - [ ] Missing letters
 - [ ] Boo who
 - [ ] Sorted Union
