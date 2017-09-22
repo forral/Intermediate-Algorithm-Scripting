@@ -10,7 +10,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Search and Replace](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/search-and-replace.html)
 - [x] [Pig Latin](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/pig-latin.html)
 - [x] [DNA Pairing](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/dna-pairing.html)
-- [ ] Missing letters
+- [x] [Missing letters](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/missing-letters.html)
 - [ ] Boo who
 - [ ] Sorted Union
 - [ ] Convert HTML Entities
