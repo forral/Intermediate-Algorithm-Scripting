@@ -11,7 +11,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Pig Latin](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/pig-latin.html)
 - [x] [DNA Pairing](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/dna-pairing.html)
 - [x] [Missing letters](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/missing-letters.html)
-- [ ] Boo who
+- [x] [Boo who](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/boo-who.html)
 - [ ] Sorted Union
 - [ ] Convert HTML Entities
 - [ ] Spinal Tap Case
