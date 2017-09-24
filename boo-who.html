@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boo Who</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Boo Who</h1>
+        <p>
+            Check if a value is classified as a boolean primitive. Return true or false.
+            Boolean primitives are true and false.
+        </p>   
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean Objects</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function booWho(bool) {
+            // What is the new fad diet for ghost developers? The Boolean.
+            return bool;
+        }
+
+        tests({
+
+            'It should return true.': function() {
+                eq(booWho(true), true);
+                fail();
+            },
+
+            'It should return true.': function() {
+                eq(booWho(false), true);
+                fail();
+            },
+
+            booWho([1, 2, 3]) should return false.
+            booWho([].slice) should return false.
+            booWho({ "a": 1 }) should return false.
+            booWho(1) should return false.
+            booWho(NaN) should return false.
+            booWho("a") should return false.
+            booWho("true") should return false.
+            booWho("false") should return false.
+
+
+        });
+    </script>
+</body>
+</html>
