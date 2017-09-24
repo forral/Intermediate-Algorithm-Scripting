@@ -43,15 +43,45 @@
                 fail();
             },
 
-            booWho([1, 2, 3]) should return false.
-            booWho([].slice) should return false.
-            booWho({ "a": 1 }) should return false.
-            booWho(1) should return false.
-            booWho(NaN) should return false.
-            booWho("a") should return false.
-            booWho("true") should return false.
-            booWho("false") should return false.
+            'It should return false.': function() {
+                eq(booWho([1, 2, 3]), false);
+                fail();
+            },
 
+            'It should return false.': function() {
+                eq(booWho([].slice), false);
+                fail();
+            },
+
+            'It should return false.': function() {
+                eq(booWho({ "a": 1 }), false);
+                fail();
+            },
+
+            'It should return false.': function() {
+                eq(booWho(1), false);
+                fail();
+            },
+
+            'It should return false.': function() {
+                eq(booWho(NaN), false);
+                fail();
+            },
+
+            'It should return false.': function() {
+                eq(booWho("a"), false);
+                fail();
+            },
+
+            'It should return false.': function() {
+                eq(booWho("true"), false);
+                fail();
+            },
+
+            'It should return false.': function() {
+                eq(booWho("false"), false);
+                fail();
+            }
 
         });
     </script>
