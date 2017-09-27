@@ -13,7 +13,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Missing letters](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/missing-letters.html)
 - [x] [Boo who](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/boo-who.html)
 - [x] [Sorted Union](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sorted.union.html)
-- [ ] Convert HTML Entities
+- [x] [Convert HTML Entities](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/convert-html-entities.html)
 - [ ] Spinal Tap Case
 - [ ] Sum All Odd Fibonacci Numbers
 - [ ] Sum All Primes

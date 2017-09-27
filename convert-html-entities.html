@@ -10,13 +10,18 @@
             background: white;
             padding: 1px 10px 10px 10px;
         }
+        code {
+            color: blueviolet;
+            background: lightgrey;
+            padding: 1px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Convert HTML Entities</h1>
         <p>
-            Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to 
+            Convert the characters <code>&</code>, <code><</code>, <code>></code>, <code>"</code> (double quote), and <code>'</code> (apostrophe), in a string to 
             their corresponding HTML entities.
         </p>   
         <ul>
@@ -28,9 +33,20 @@
     <script src="simple-test-lib.js"></script>
     <script>
 
+        // &amp; => &
+        // &gt;  => >
+        // &lt;  => <
+        // &quot; => "
+        // &apos; => '
+
         function convertHTML(str) {
-            // &colon;&rpar;
-            return str;
+
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&apos;');
         }
 
         tests({
@@ -59,7 +75,7 @@
                 eq(testStr, 'Stuff in &​quot;quotation marks&​quot;');
             },
 
-            'It should return Shindler&​apos;s List.'; function() {
+            'It should return Shindler&​apos;s List.': function() {
                 var testStr = convertHTML("Shindler's List");
 
                 eq(testStr, 'Shindler&​apos;s List');
