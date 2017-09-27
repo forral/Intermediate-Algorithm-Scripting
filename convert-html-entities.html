@@ -54,37 +54,37 @@
             'It should return Dolce &​amp; Gabbana.': function() {
                 var testStr = convertHTML("Dolce & Gabbana");
 
-                eq(testStr, 'Dolce &​amp; Gabbana');
+                eq(testStr, 'Dolce &amp; Gabbana');
             },
 
             'It should return Hamburgers &​lt; Pizza &​lt; Tacos.': function() {
                 var testStr = convertHTML("Hamburgers < Pizza < Tacos");
                 
-                eq(testStr, 'Hamburgers &​lt; Pizza &​lt; Tacos');
+                eq(testStr, 'Hamburgers &lt; Pizza &lt; Tacos');
             },
 
             'It should return Sixty &​gt; twelve.': function() {
                 var testStr = convertHTML("Sixty > twelve");
 
-                eq(testStr, 'Sixty &​gt; twelve');
+                eq(testStr, 'Sixty &gt; twelve');
             },
 
             'It should return Stuff in &​quot;quotation marks&​quot;.': function() {
                 var testStr = convertHTML('Stuff in "quotation marks"');
 
-                eq(testStr, 'Stuff in &​quot;quotation marks&​quot;');
+                eq(testStr, 'Stuff in &quot;quotation marks&quot;');
             },
 
             'It should return Shindler&​apos;s List.': function() {
                 var testStr = convertHTML("Shindler's List");
 
-                eq(testStr, 'Shindler&​apos;s List');
+                eq(testStr, 'Shindler&apos;s List');
             },
 
             'It should return &​lt;&​gt;.': function() {
                 var testStr = convertHTML("<>");
 
-                eq(testStr, '&​lt;&​gt;');
+                eq(testStr, '&lt;&gt;');
             },
 
             'It should return abc.': function() {
