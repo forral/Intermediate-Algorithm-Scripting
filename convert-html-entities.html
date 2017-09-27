@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert HTML Entities</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Convert HTML Entities</h1>
+        <p>
+            Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to 
+            their corresponding HTML entities.
+        </p>   
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></li>
+            <li><a href="https://dev.w3.org/html5/html-author/charref">HTML Entities</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace()</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function convertHTML(str) {
+            // &colon;&rpar;
+            return str;
+        }
+
+        tests({
+
+            'It should return Dolce &​amp; Gabbana.': function() {
+                var testStr = convertHTML("Dolce & Gabbana");
+
+                eq(testStr, 'Dolce &​amp; Gabbana');
+            },
+
+            'It should return Hamburgers &​lt; Pizza &​lt; Tacos.': function() {
+                var testStr = convertHTML("Hamburgers < Pizza < Tacos");
+                
+                eq(testStr, 'Hamburgers &​lt; Pizza &​lt; Tacos');
+            },
+
+            'It should return Sixty &​gt; twelve.': function() {
+                var testStr = convertHTML("Sixty > twelve");
+
+                eq(testStr, 'Sixty &​gt; twelve');
+            },
+
+            'It should return Stuff in &​quot;quotation marks&​quot;.': function() {
+                var testStr = convertHTML('Stuff in "quotation marks"');
+
+                eq(testStr, 'Stuff in &​quot;quotation marks&​quot;');
+            },
+
+            'It should return Shindler&​apos;s List.'; function() {
+                var testStr = convertHTML("Shindler's List");
+
+                eq(testStr, 'Shindler&​apos;s List');
+            },
+
+            'It should return &​lt;&​gt;.': function() {
+                var testStr = convertHTML("<>");
+
+                eq(testStr, '&​lt;&​gt;');
+            },
+
+            'It should return abc.': function() {
+                var testStr = convertHTML("abc");
+
+                eq(testStr, 'abc');
+            }
+
+        });
+    </script>
+</body>
+</html>
