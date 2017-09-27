@@ -12,7 +12,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [DNA Pairing](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/dna-pairing.html)
 - [x] [Missing letters](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/missing-letters.html)
 - [x] [Boo who](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/boo-who.html)
-- [ ] Sorted Union
+- [x] [Sorted Union](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sorted.union.html)
 - [ ] Convert HTML Entities
 - [ ] Spinal Tap Case
 - [ ] Sum All Odd Fibonacci Numbers
