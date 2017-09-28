@@ -33,7 +33,27 @@
     <script>
 
         function sumFibs(num) {
-            return num;
+
+            var first = 0, 
+                second = 1, 
+                next = 0, 
+                count = 2,
+                result = [first, second];
+
+            while (next < num) {
+                next = first + second; 
+                first = second; 
+                second = next;
+
+                if (next <= num && next % 2 !== 0) {
+                    result.push(next);
+                }
+            }
+
+            return result.reduce(function(a, b){
+                return a + b;
+            });
+
         }
 
         tests({

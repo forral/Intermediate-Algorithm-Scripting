@@ -31,9 +31,13 @@
 
         function spinalCase(str) {
 
+            // /([a-z])([A-Z])/g, '$1 $2' explanation:
+            //capture group () with a range [] between a-z
+            //capture group () with a range [] between A-Z
+            // it means find any lower case letter that have in front of it any upper case letter
+            // put a white space between the capture groups $1 $2
             return str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase()
-                .replace(/ /g, '-')
-                .replace(/_/g, '-');
+                .replace(/ |_/g, '-');
         }
 
         tests({
