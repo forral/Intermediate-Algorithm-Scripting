@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum All Primes</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+        code {
+            color: blueviolet;
+            background: lightgrey;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sum All Primes</h1>
+        <p>
+            Sum all the prime numbers up to and including the provided number.
+            A prime number is defined as a number greater than one and having only two divisors, one and itself. For example, 2 is a prime number because it's only divisible by one and two.
+            The provided number may not be a prime.</p>   
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">For Loops</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push?v=a">Array.prototype.push()</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function sumPrimes(num) {
+            return num;
+        }
+
+        tests({
+
+            'It should return a number.': function() {
+                var intTest = sumPrimes(10);
+                eq(typeof intTest, 'number');
+            },
+
+            'It should return 17.': function() {
+                var intTest = sumPrimes(10);
+                eq(intTest, 17);
+            },
+
+            'It should return 73156.': function() {
+                var intTest = sumPrimes(977);
+                eq(intTest, 73156);
+            }
+
+        });
+    </script>
+</body>
+</html>
