@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spinal Tap Case</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+        code {
+            color: blueviolet;
+            background: lightgrey;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spinal Tap Case</h1>
+        <p>Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.</p>   
+        <ul>
+            <li><a href="#">RegExp</a></li>
+            <li><a href="#">String.prototype.replace()</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function spinalCase(str) {
+
+            return str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase()
+                .replace(/ /g, '-')
+                .replace(/_/g, '-');
+        }
+
+        tests({
+
+            'It should return "this-is-spinal-tap".': function() {
+                var testStr = spinalCase("thisIsSpinalTap");
+                eq(testStr, 'this-is-spinal-tap');
+            },
+
+            'It should return "this-is-spinal-tap".': function() {
+                var testStr = spinalCase("This Is Spinal Tap");
+                eq(testStr, 'this-is-spinal-tap');
+            },
+
+            'It should return "the-andy-griffith-show".': function() {
+                var testStr = spinalCase("The_Andy_Griffith_Show");
+                eq(testStr, 'the-andy-griffith-show');
+            },
+            
+            'It should return "teletubbies-say-eh-oh".': function() {
+                var testStr = spinalCase("Teletubbies say Eh-oh");
+                eq(testStr, 'teletubbies-say-eh-oh');
+            },
+
+            'It should return "all-the-small-things".': function() {
+                var testStr = spinalCase("AllThe-small Things");
+                eq(testStr, 'all-the-small-things');
+            }
+
+        });
+    </script>
+</body>
+</html>
