@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum All Odd Fibonacci Numbers</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+        code {
+            color: blueviolet;
+            background: lightgrey;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sum All Odd Fibonacci Numbers</h1>
+        <p>
+            Given a positive integer <code>num</code>, return the sum of all odd Fibonacci numbers that are less than or equal to <code>num</code>.<br>
+            The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.<br>
+            For example, <code>sumFibs(10)</code> should return <code>10</code> because all odd Fibonacci numbers less than <code>10</code> are 1, 1, 3, and 5.
+        </p>   
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder">Remainder</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function sumFibs(num) {
+            return num;
+        }
+
+        tests({
+
+            'It should return a number.': function() {
+                var testInt = sumFibs(1);
+                eq(typeof testInt, 'number');
+            },
+
+            'It should return 1785.': function() {
+                var testInt = sumFibs(1000);
+                eq(testInt, 1785);
+            },
+
+            'It should return 4613732.': function() {
+                var testInt = sumFibs(4000000);
+                eq(testInt, 4613732);
+            },
+
+            'It should return 5.': function() {
+                var testInt = sumFibs(4);
+                eq(testInt, 5);
+            },
+
+            'It should return 60696.': function() {
+                var testInt = sumFibs(75024);
+                eq(testInt, 60696);
+            },
+
+            'It should return 135721.': function () {
+                var testInt = sumFibs(75025);
+                eq(testInt, 135721);
+            }
+
+        });
+    </script>
+</body>
+</html>
