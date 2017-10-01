@@ -33,7 +33,28 @@
     <script>
 
         function sumPrimes(num) {
-            return num;
+
+            var primeNum = [];
+
+            for (var i = num; i > 1; i--) {
+                var counter = 0;
+                if (i % 1 === 0 && i % i === 0) {
+                    counter = 2;
+                    for (var j = num - 1; j > 1 ; j--) {
+                        if (i !== j && i % j === 0) {
+                            counter++;
+                        }
+                    }
+                }
+                if (counter === 2) {
+                    primeNum.push(i);
+                }
+            }
+
+            return primeNum.reduce(function(a, b) {
+                return a + b;
+            });
+
         }
 
         tests({
