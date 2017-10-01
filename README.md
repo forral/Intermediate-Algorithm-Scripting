@@ -15,8 +15,8 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Sorted Union](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sorted.union.html)
 - [x] [Convert HTML Entities](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/convert-html-entities.html)
 - [x] [Spinal Tap Case](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/spinal-tap-case.html)
-- [ ] Sum All Odd Fibonacci Numbers
-- [ ] Sum All Primes
+- [x] [Sum All Odd Fibonacci Numbers](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-odd-fibonacci-numbers.html)
+- [x] [Sum All Primes](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-primes.html)
 - [ ] Smallest Common Multiple
 - [ ] Finders Keepers
 - [ ] Drop it
