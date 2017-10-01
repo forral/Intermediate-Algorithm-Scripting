@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smallest Common Multiple</title>
+    <style>
+        header {
+            background: white;
+            padding: 1px 10px 10px 10px;
+        }
+        code {
+            color: blueviolet;
+            background: lightgrey;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smallest Common Multiple</h1>
+        <p>
+            Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.<br>
+            The range will be an array of two numbers that will not necessarily be in numerical order.<br>
+            e.g. for 1 and 3 - find the smallest common multiple of both 1 and 3 that is evenly divisible by all numbers between 1 and 3.<br>
+        </p>
+        <ul>
+            <li><a href="https://www.mathsisfun.com/least-common-multiple.html">Smallest Common Multiple</a></li>
+        </ul>
+    </header>
+    <script src="simple-test-lib.js"></script>
+    <script>
+
+        function smallestCommons(arr) {
+            return arr;
+        }
+
+        tests({
+
+            'It should return a number.': function() {
+                 var testInt = smallestCommons([1, 5]);
+                 eq(typeof testInt, 'number');
+            },
+
+            'It should return 60.': function() {
+                 var testInt = smallestCommons([1, 5]);
+                 eq(testInt, 60);
+            },
+
+            'It should return 60.': function() {
+                 var testInt = smallestCommons([5, 1]);
+                 eq(testInt, 60);
+            },
+
+            'It should return 360360.': function() {
+                 var testInt = smallestCommons([1, 13]);
+                 eq(testInt, 360360);
+            },
+
+            'It should return 6056820.': function() {
+                 var testInt = smallestCommons([23, 18]);
+                 eq(testInt, 6056820);
+            },    
+
+        });
+    </script>
+</body>
+</html>
