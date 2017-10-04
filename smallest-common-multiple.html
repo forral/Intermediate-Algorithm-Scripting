@@ -37,6 +37,7 @@
 
             var smallNumberMulti = [];
             var largestNumberMulti = [];
+            var result;
 
             if (arr[0] > arr[1]) {
                 smallNumberMulti.push(arr[1]);
@@ -46,33 +47,72 @@
                 largestNumberMulti.push(arr[1]);
             }
 
-            var state = true;
-            while (state) {
+            var range = getRange();
+            checkForCommons();
 
-                smallNumberMulti.push(smallNumberMulti[smallNumberMulti.length - 1] + smallNumberMulti[0]);
-                largestNumberMulti.push(largestNumberMulti[largestNumberMulti.length - 1] + largestNumberMulti[0]);
+            function checkForCommons() {
+                var state = true;
 
-                for (var i = 0; i < smallNumberMulti.length; i++) {
-                    if (largestNumberMulti.indexOf(smallNumberMulti[i]) !== -1) {
-                        return smallNumberMulti[i];
-                        state = false;
+                while (state) {
+                    // refactor this two lines of code to be more readable 
+                    smallNumberMulti.push(smallNumberMulti[smallNumberMulti.length - 1] + smallNumberMulti[0]);
+                    largestNumberMulti.push(largestNumberMulti[largestNumberMulti.length - 1] + largestNumberMulti[0]);
+
+                    for (var i = 0; i < smallNumberMulti.length; i++) {
+                        if (largestNumberMulti.indexOf(smallNumberMulti[i]) !== -1) {
+                            state = false;
+                            isDividedByRange(smallNumberMulti[i]);
+                            break;
+                        }
                     }
                 }
             }
 
-            console.log(smallNumberMulti);
-            console.log(largestNumberMulti);
+            function getRange() {
+                var smallNumber = smallNumberMulti[0];
+                var largeNumber = largestNumberMulti[0];
+                var rangeArr = [];
+
+                for (var i = smallNumber; i < largeNumber; i++) {
+                    rangeArr.push(i);
+                }
+
+                return rangeArr;
+            }
+            
+            function isDividedByRange(currentCommon) {
+
+                var counter = 0;
+
+                for (var i = 0; i < range.length; i++) {
+
+                    if (currentCommon % range[i] !== 0) {
+                        checkForCommons();
+                        break;
+                    } else {
+                        counter++;
+                    }
+                }
+
+                if (counter === range.length) {
+                        result = currentCommon;
+                }
+
+            }
+
+            return result;
 
         }
 
         tests({
 
-            'It should return a number.': function() {
-                 var testInt = smallestCommons([1, 5]);
-                 eq(typeof testInt, 'number');
-            },
+            // 'It should return a number.': function() {
+            //      var testInt = smallestCommons([1, 5]);
+            //      eq(typeof testInt, 'number');
+            // },
 
             'It should return 60.': function() {
+                debugger;
                  var testInt = smallestCommons([1, 5]);
                  eq(testInt, 60);
             }/*,
