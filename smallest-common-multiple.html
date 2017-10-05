@@ -37,26 +37,35 @@
 
             var smallNumberMulti = [];
             var largestNumberMulti = [];
-            var result;
 
+            var smallNumber, largeNumber;
+            
+            var result;
+            debugger;
             if (arr[0] > arr[1]) {
-                smallNumberMulti.push(arr[1]);
-                largestNumberMulti.push(arr[0]);
+                // smallNumberMulti.push(arr[1]);
+                smallNumber = arr[1];
+                // largestNumberMulti.push(arr[0]);
+                largeNumber = arr[0];
             } else {
-                smallNumberMulti.push(arr[0]);
-                largestNumberMulti.push(arr[1]);
+                // smallNumberMulti.push(arr[0]);
+                smallNumber = arr[0];
+                // largestNumberMulti.push(arr[1]);
+                largeNumber = arr[1];
             }
 
             var range = getRange();
             checkForCommons();
 
-            function checkForCommons() {
+            function checkForCommons(smallNumber, largeNumber) {
                 var state = true;
+                smallNumberMulti = [];
+                largestNumberMulti = [];
 
                 while (state) {
                     // refactor this two lines of code to be more readable 
-                    smallNumberMulti.push(smallNumberMulti[smallNumberMulti.length - 1] + smallNumberMulti[0]);
-                    largestNumberMulti.push(largestNumberMulti[largestNumberMulti.length - 1] + largestNumberMulti[0]);
+                    smallNumberMulti.push(smallNumber);
+                    largestNumberMulti.push(largeNumber);
 
                     for (var i = 0; i < smallNumberMulti.length; i++) {
                         if (largestNumberMulti.indexOf(smallNumberMulti[i]) !== -1) {
