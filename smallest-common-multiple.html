@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smallest Common Multiple</title>
@@ -32,99 +32,49 @@
     <script src="simple-test-lib.js"></script>
     <script>
 
-        // smallestCommons([4, 10]) -> 20
+        // smallestCommons([1, 5]) -> 20
         function smallestCommons(arr) {
-
-            var smallNumberMulti = [];
-            var largestNumberMulti = [];
-
-            var smallNumber, largeNumber;
-            
-            var result;
             debugger;
-            if (arr[0] > arr[1]) {
-                // smallNumberMulti.push(arr[1]);
-                smallNumber = arr[1];
-                // largestNumberMulti.push(arr[0]);
-                largeNumber = arr[0];
-            } else {
-                // smallNumberMulti.push(arr[0]);
-                smallNumber = arr[0];
-                // largestNumberMulti.push(arr[1]);
-                largeNumber = arr[1];
-            }
-
-            var range = getRange();
-            checkForCommons();
-
-            function checkForCommons(smallNumber, largeNumber) {
-                var state = true;
-                smallNumberMulti = [];
-                largestNumberMulti = [];
-
-                while (state) {
-                    // refactor this two lines of code to be more readable 
-                    smallNumberMulti.push(smallNumber);
-                    largestNumberMulti.push(largeNumber);
-
-                    for (var i = 0; i < smallNumberMulti.length; i++) {
-                        if (largestNumberMulti.indexOf(smallNumberMulti[i]) !== -1) {
-                            state = false;
-                            isDividedByRange(smallNumberMulti[i]);
-                            break;
-                        }
-                    }
-                }
-            }
-
-            function getRange() {
-                var smallNumber = smallNumberMulti[0];
-                var largeNumber = largestNumberMulti[0];
-                var rangeArr = [];
-
-                for (var i = smallNumber; i < largeNumber; i++) {
-                    rangeArr.push(i);
-                }
-
-                return rangeArr;
-            }
             
-            function isDividedByRange(currentCommon) {
+            // sort passed array.
+            arr.sort();
+            var range = [];
 
-                var counter = 0;
+            // loop through passed sorted array to get the range.
+            for (var i = arr[0]; i <= arr[arr.length - 1]; i++) {
+                range.push(i);
+            } 
 
-                for (var i = 0; i < range.length; i++) {
+            var state = true;
+            var LCM = 0;
 
-                    if (currentCommon % range[i] !== 0) {
-                        checkForCommons();
+            while (state) {
+                LCM++;
+
+                for (var j = range[0]; j <= range[range.length - 1]; j++) {
+                    if (LCM % j !== 0) {
                         break;
-                    } else {
-                        counter++;
+                    } else if (j === range[range.length - 1]) {
+                        state = false;
                     }
-                }
-
-                if (counter === range.length) {
-                        result = currentCommon;
                 }
 
             }
 
-            return result;
-
+            return LCM;
         }
 
         tests({
 
-            // 'It should return a number.': function() {
-            //      var testInt = smallestCommons([1, 5]);
-            //      eq(typeof testInt, 'number');
-            // },
+            'It should return a number.': function() {
+                 var testInt = smallestCommons([1, 5]);
+                 eq(typeof testInt, 'number');
+            },
 
             'It should return 60.': function() {
-                debugger;
                  var testInt = smallestCommons([1, 5]);
                  eq(testInt, 60);
-            }/*,
+            },
 
             'It should return 60.': function() {
                  var testInt = smallestCommons([5, 1]);
@@ -139,7 +89,7 @@
             'It should return 6056820.': function() {
                  var testInt = smallestCommons([23, 18]);
                  eq(testInt, 6056820);
-            },*/
+            },
 
         });
     </script>
