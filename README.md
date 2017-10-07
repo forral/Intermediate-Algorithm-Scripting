@@ -3,6 +3,8 @@ This is my repo for the [Free Code Camp Intermediate Algorithm Scripting](https:
 
 I don't like solving these challenges in the Free Code Camp website, so I use an testing library developed by me with the help of the [Watch and Code](https://watchandcode.com/p/premium) premium course. The lib name is Simple Test Lib and you can have more information about it in [here](https://github.com/forral/simple-test-lib).
 
+Keep in mind that I didn't refactor any of the code in this challenge. I know I can write cleaner code but the objective is to finish has quick as I can. Maybe in a near future I go back and clean all the mess.
+
 - [x] [Sum All Numbers in a Range Complete](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-numbers-in-a-range.html)
 - [x] [Diff Two Arrays](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/diff-two-arrays.html)
 - [x] [Roman Numeral Converter](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/roman-numeral-converter.html)
@@ -17,7 +19,7 @@ I don't like solving these challenges in the Free Code Camp website, so I use an
 - [x] [Spinal Tap Case](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/spinal-tap-case.html)
 - [x] [Sum All Odd Fibonacci Numbers](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-odd-fibonacci-numbers.html)
 - [x] [Sum All Primes](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-primes.html)
-- [ ] Smallest Common Multiple
+- [x] [Smallest Common Multiple](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/smallest-common-multiple.html)
 - [ ] Finders Keepers
 - [ ] Drop it
 - [ ] Steamroller
