@@ -32,33 +32,36 @@
     <script src="simple-test-lib.js"></script>
     <script>
 
-        // smallestCommons([1, 5]) -> 20
+        // smallestCommons([5, 1]) -> 60
         function smallestCommons(arr) {
-            debugger;
             
             // sort passed array.
             arr.sort();
             var range = [];
 
-            // loop through passed sorted array to get the range.
+            // loop through passed sorted array to get the range between the two numbers in the array.
             for (var i = arr[0]; i <= arr[arr.length - 1]; i++) {
                 range.push(i);
             } 
 
+            // variable to passed the while loop.
             var state = true;
+            // Lower Common Number variable.
             var LCM = 0;
 
             while (state) {
                 LCM++;
 
                 for (var j = range[0]; j <= range[range.length - 1]; j++) {
+                    // check if the current LCM value is divisible by all the numbers in the range array.
                     if (LCM % j !== 0) {
                         break;
+                    // is checks positive till the last number in the range array then we stop the while loope 
+                    // and return the current value of the LCM variable.
                     } else if (j === range[range.length - 1]) {
                         state = false;
                     }
                 }
-
             }
 
             return LCM;
@@ -89,7 +92,7 @@
             'It should return 6056820.': function() {
                  var testInt = smallestCommons([23, 18]);
                  eq(testInt, 6056820);
-            },
+            }
 
         });
     </script>
