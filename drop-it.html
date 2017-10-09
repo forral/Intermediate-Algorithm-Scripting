@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Dropt it</title>
+	<style>
+		header {
+			background: white;
+			padding: 1px 10px 10px 10px;
+		}
+		code {
+			color: blueviolet;
+			background: lightgrey;
+			padding: 1px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Dropt it</h1>
+		<p>
+      Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns <code>true</code>.
+      The second argument, <code>func</code>, is a function you'll use to test the first elements of the array to decide if you should drop it or not.
+      Return the rest of the array, otherwise return an empty array.
+    </p>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments">Arguments object</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">Array.prototype.shift()</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice()</a></li>
+		</ul>
+	</header>
+	<script src="simple-test-lib.js"></script>
+	<script>
+
+    function dropElements(arr, func) {
+      // Drop them elements.
+
+      counter = 0;
+
+      var arrTest = [];
+
+      for (var i = 0; i < arr.length; i++) {
+        counter++;
+
+        if (func(arr[i])) {
+          return arr.slice(i, arr.length);
+        }
+
+        if (counter === arr.length) {
+          console.log(arr);
+        }
+
+      }
+
+
+    }
+
+
+
+		tests({
+
+      'It should return [3, 4].': function() {
+        var testArr = dropElements([1, 2, 3, 4], function(n) {return n >= 3;});
+        eq(testArr[0], 3);
+        eq(testArr[1], 4);
+      },
+
+      'It should return [1, 0, 1].': function() {
+        var testArr = dropElements([0, 1, 0, 1], function(n) {return n === 1;});
+        eq(testArr[0],1);
+        eq(testArr[1],0);
+        eq(testArr[2],1);
+      },
+
+      'It should return [1, 2, 3].': function() {
+        var testArr = dropElements([1, 2, 3], function(n) {return n > 0;});
+        eq(testArr[0],1);
+        eq(testArr[1],2);
+        eq(testArr[2],3);
+      },
+
+      'It should return [].': function() {
+        var testArr = dropElements([1, 2, 3, 4], function(n) {return n > 5;});
+        eq(Array.isArray(testArr));
+        eq(testArr.length === 0);
+      },
+
+      'It should return [7, 4].': function() {
+        var testArr = dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;});
+        eq(testArr[0], 7);
+        eq(testArr[1], 4);
+      },
+
+      'It should return [3, 9, 2].': function() {
+        var testArr = dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;});
+        eq(testArr[0, 3]);
+        eq(testArr[1], 9);
+        eq(testArr[2], 2);
+      }
+			
+		});
+	</script>
+</body>
+</html>
