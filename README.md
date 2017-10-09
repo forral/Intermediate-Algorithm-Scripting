@@ -20,7 +20,7 @@ Keep in mind that I didn't refactor any of the code in this challenge. I know I 
 - [x] [Sum All Odd Fibonacci Numbers](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-odd-fibonacci-numbers.html)
 - [x] [Sum All Primes](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-primes.html)
 - [x] [Smallest Common Multiple](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/smallest-common-multiple.html)
-- [ ] Finders Keepers
+- [x] [Finders Keepers](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/finders-keepers.html)
 - [ ] Drop it
 - [ ] Steamroller
 - [ ] Binary Agents

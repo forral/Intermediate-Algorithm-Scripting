@@ -20,7 +20,7 @@
 <body>
 	<header>
 		<h1>Finders Keepers</h1>
-		<p>Challenge explanation</p>   
+		<p>Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument).</p>   
 		<ul>
 			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a></li>
 		</ul>
@@ -29,12 +29,24 @@
 	<script>
 
     function findElement(arr, func) {
-      var num = 0;
-      return num;
+
+      // My solution;
+      // for (var i = 0; i < arr.length; i++) {
+
+      //   if (func(arr[i])) {
+      //     return arr[i];
+
+      //   } else if (arr[i] === arr[arr.length - 1]) {
+      //     return undefined;
+      //   }
+      // }
+
+      // Stephen Mayeux solution https://www.youtube.com/watch?v=0JrZju2q2bs :
+      return arr.filter(func)[0];
+
     }
 
 		tests({
-
       'It should return 8.': function() {
         var testInt = findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; });
         eq(testInt, 8);
