@@ -21,7 +21,7 @@ Keep in mind that I didn't refactor any of the code in this challenge. I know I 
 - [x] [Sum All Primes](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/sum-all-primes.html)
 - [x] [Smallest Common Multiple](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/smallest-common-multiple.html)
 - [x] [Finders Keepers](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/finders-keepers.html)
-- [ ] Drop it
+- [x] [Drop it](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/drop-it.html)
 - [ ] Steamroller
 - [ ] Binary Agents
 - [ ] Everything Be True

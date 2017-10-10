@@ -33,13 +33,10 @@
 	</header>
 	<script src="simple-test-lib.js"></script>
 	<script>
-
     function dropElements(arr, func) {
       // Drop them elements.
 
       counter = 0;
-
-      var arrTest = [];
 
       for (var i = 0; i < arr.length; i++) {
         counter++;
@@ -54,7 +51,6 @@
         }
 
       }
-
 
     }
 
@@ -83,10 +79,11 @@
       },
 
       'It should return [].': function() {
+        debugger;
         var testArr = dropElements([1, 2, 3, 4], function(n) {return n > 5;});
         eq(Array.isArray(testArr), true);
         eq(testArr.length, 0);
-      },
+      }/*,
 
       'It should return [7, 4].': function() {
         var testArr = dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;});
@@ -99,7 +96,7 @@
         eq(testArr[0, 3]);
         eq(testArr[1], 9);
         eq(testArr[2], 2);
-      }
+      }*/
 			
 		});
 	</script>
