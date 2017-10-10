@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Steamroller</title>
+	<style>
+		header {
+			background: white;
+			padding: 1px 10px 10px 10px;
+		}
+		code {
+			color: blueviolet;
+			background: lightgrey;
+			padding: 1px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Steamroller</h1>
+		<p>Flatten a nested array. You must account for varying levels of nesting.</p>   
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">Array.isArray()</a></li>
+		</ul>
+	</header>
+	<script src="simple-test-lib.js"></script>
+	<script>
+
+    function steamrollArray(arr) {
+      // I'm a steamroller, baby
+
+      for (var i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+          console.log(arr[i]);
+        }
+      }
+
+      return arr;
+    }
+
+		tests({
+
+      'It should return ["a", "b"].': function() {
+        var testArr = steamrollArray([[["a"]], [["b"]]]);
+        eq(testArr[0], 'a');
+        eq(testArr[1], 'b');
+      }/*,
+
+      'It should return [1, 2, 3, 4].': function() {
+        var testArr = steamrollArray([1, [2], [3, [[4]]]]);
+        eq(test[0], 1);
+        eq(test[1], 2);
+        eq(test[2], 3);
+        eq(test[3], 4);
+      },
+
+      'It should return [1, 3, 4].': function() {
+        var testArr = steamrollArray([1, [], [3, [[4]]]]);
+        eq(testArr[0], 1);
+        eq(testArr[1], 3);
+        eq(testArr[2], 4);
+      },
+
+      'It should return [1, {}, 3, 4].': function() {
+        var testArr = steamrollArray([1, {}, [3, [[4]]]]);
+        eq(testArr[0], 1);
+        eq(typeof testArr[1], 'object');
+        eq(testArr[2], 3);
+        eq(testArr[3], 4);
+      }*/
+			
+		});
+	</script>
+</body>
+</html>
