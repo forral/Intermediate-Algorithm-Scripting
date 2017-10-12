@@ -28,43 +28,33 @@
 	<script src="simple-test-lib.js"></script>
 	<script>
 
-    // [[["a"]], [["b"]]]
-    // [["a"], ["b"]]
-    // 
+    
+
     function steamrollArray(arr) {
       // I'm a steamroller, baby
-    
-      if (Array.isArray(arr)) {
-    
+
+      var newArr = [];
+
+      (function removeArray(arr) {
         for (var i = 0; i < arr.length; i++) {
-    
-        if (Array.isArray(arr[i])) {
-    
-          return steamrollArray(arr[i].reduce( function(e) { return e; } ));
-    
-        } else {
-    
-          return arr[i];		
-    
+          if (!Array.isArray(arr[i])) {
+            newArr.push(arr[i]);
+          } else {
+            removeArray(arr[i]);
+          }
         }
-    
-        }
-    
-      } else {
-    
-        return arr;
-      }
-    
+      })(arr);
+
+     return newArr;
     }
 
 		tests({
 
       'It should return ["a", "b"].': function() {
-        // debugger;
         var testArr = steamrollArray([[["a"]], [["b"]]]);
         eq(testArr[0], 'a');
         eq(testArr[1], 'b');
-      }/*,
+      },
 
       'It should return [1, 2, 3, 4].': function() {
         var testArr = steamrollArray([1, [2], [3, [[4]]]]);
@@ -87,7 +77,7 @@
         eq(typeof testArr[1], 'object');
         eq(testArr[2], 3);
         eq(testArr[3], 4);
-      }*/
+      }
 			
 		});
 	</script>
