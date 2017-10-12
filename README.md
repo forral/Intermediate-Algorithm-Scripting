@@ -22,7 +22,7 @@ Keep in mind that I didn't refactor any of the code in this challenge. I know I 
 - [x] [Smallest Common Multiple](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/smallest-common-multiple.html)
 - [x] [Finders Keepers](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/finders-keepers.html)
 - [x] [Drop it](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/drop-it.html)
-- [ ] Steamroller
+- [x] [Steamroller](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/steamroller.html)
 - [ ] Binary Agents
 - [ ] Everything Be True
 - [ ] Arguments Optional
