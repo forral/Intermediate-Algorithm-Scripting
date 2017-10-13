@@ -23,6 +23,6 @@ Keep in mind that I didn't refactor any of the code in this challenge. I know I 
 - [x] [Finders Keepers](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/finders-keepers.html)
 - [x] [Drop it](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/drop-it.html)
 - [x] [Steamroller](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/steamroller.html)
-- [ ] Binary Agents
+- [x] [Binary Agents](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/binary-agents.html)
 - [ ] Everything Be True
 - [ ] Arguments Optional

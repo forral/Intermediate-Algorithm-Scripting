@@ -32,44 +32,52 @@
 	<script src="simple-test-lib.js"></script>
 	<script>
 
+    // My solution:
+    // function binaryAgent(str) {
+
+    //   var binarySentenceArray = str.split(' ');
+
+    //   var binaryValues = {
+    //     7: 1,
+    //     6: 2,
+    //     5: 4,
+    //     4: 8,
+    //     3: 16,
+    //     2: 32,
+    //     1: 64,
+    //     0: 128
+    //   }
+
+    //   function translateBinary(str) {
+    //     var currentBinaryValue = 0;
+
+    //     for (var i = 0; i < str.length; i++) {
+    //       if (str[i] > 0) {
+    //         currentBinaryValue = currentBinaryValue + binaryValues[i];
+    //       }
+    //     }
+
+    //     return(String.fromCharCode(currentBinaryValue));
+    //   }
+
+    //   var sentenceArray = [];
+
+    //   for (var i = 0; i < binarySentenceArray.length; i++) {
+    //     sentenceArray.push(translateBinary(binarySentenceArray[i]));
+    //   }
+
+    //   return sentenceArray.join('');
+
+    // }
+
+    // Stephen Mayeux solution (https://www.youtube.com/watch?v=ghLTDAvLs_w):
     function binaryAgent(str) {
-
-      var binarySentenceArray = str.split(' ');
-
-      var binaryValues = {
-        7: 1,
-        6: 2,
-        5: 4,
-        4: 8,
-        3: 16,
-        2: 32,
-        1: 64,
-        0: 128
-      }
-
-      function translateBinary(str) {
-        var currentBinaryValue = 0;
-
-        for (var i = 0; i < str.length; i++) {
-          if (str[i] > 0) {
-            currentBinaryValue = currentBinaryValue + binaryValues[i];
-          }
-        }
-
-        return(String.fromCharCode(currentBinaryValue));
-      }
-
-      var sentenceArray = [];
-
-      for (var i = 0; i < binarySentenceArray.length; i++) {
-        sentenceArray.push(translateBinary(binarySentenceArray[i]));
-      }
-
-      return sentenceArray.join('');
-
+      return str.split(' ').map(function(value) {
+        return String.fromCharCode(parseInt(value, 2));
+      }).join('');
     }
 
-		tests({
+    tests({
 
       'It should return "Aren\'t bonfires fun!?"': function() {
         var testString = binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
@@ -80,8 +88,8 @@
         var testString = binaryAgent("01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001");
         eq(testString, 'I love FreeCodeCamp!');
       }
-			
-		});
+      
+    });
 	</script>
 </body>
 </html>
