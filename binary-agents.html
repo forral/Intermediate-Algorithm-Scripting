@@ -33,7 +33,40 @@
 	<script>
 
     function binaryAgent(str) {
-      return str;
+
+      var binarySentenceArray = str.split(' ');
+
+      var binaryValues = {
+        7: 1,
+        6: 2,
+        5: 4,
+        4: 8,
+        3: 16,
+        2: 32,
+        1: 64,
+        0: 128
+      }
+
+      function translateBinary(str) {
+        var currentBinaryValue = 0;
+
+        for (var i = 0; i < str.length; i++) {
+          if (str[i] > 0) {
+            currentBinaryValue = currentBinaryValue + binaryValues[i];
+          }
+        }
+
+        return(String.fromCharCode(currentBinaryValue));
+      }
+
+      var sentenceArray = [];
+
+      for (var i = 0; i < binarySentenceArray.length; i++) {
+        sentenceArray.push(translateBinary(binarySentenceArray[i]));
+      }
+
+      return sentenceArray.join('');
+
     }
 
 		tests({
