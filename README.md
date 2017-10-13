@@ -24,5 +24,5 @@ Keep in mind that I didn't refactor any of the code in this challenge. I know I 
 - [x] [Drop it](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/drop-it.html)
 - [x] [Steamroller](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/steamroller.html)
 - [x] [Binary Agents](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/binary-agents.html)
-- [ ] Everything Be True
+- [x] [Everything Be True](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/everything-be-true.html)
 - [ ] Arguments Optional
