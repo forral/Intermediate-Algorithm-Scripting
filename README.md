@@ -25,4 +25,4 @@ Keep in mind that I didn't refactor any of the code in this challenge. I know I 
 - [x] [Steamroller](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/steamroller.html)
 - [x] [Binary Agents](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/binary-agents.html)
 - [x] [Everything Be True](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/everything-be-true.html)
-- [ ] Arguments Optional
+- [x] [Arguments Optional](https://github.com/forral/Intermediate-Algorithm-Scripting/blob/master/arguments-optional.html)

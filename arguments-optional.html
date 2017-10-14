@@ -35,7 +35,17 @@
 	<script>
 
 		function addTogether() {
-			return false;
+
+			if (arguments.length === 1 && typeof arguments[0] === 'number') {
+				var firstNumber = arguments[0];
+				return function(num) {
+					return typeof arguments[0] === 'number' ? firstNumber + num : undefined;
+				};
+			} else if (arguments.length === 2 && typeof arguments[0] === 'number' && typeof arguments[1] === 'number') {
+				return arguments[0] + arguments[1];
+			} else {
+				return undefined;
+			}
 		}
 
 		tests({
